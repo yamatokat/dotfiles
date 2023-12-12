@@ -70,3 +70,19 @@ fi
 # if (which zprof > /dev/null 2>&1) ;then
 #   zprof
 # fi
+export LDFLAGS="-L/usr/local/opt/zlib/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include"
+export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
+
+
+# alias
+alias nid='export AWS_PROFILE=next-api-identity-special-admin'
+alias ndev='export AWS_PROFILE=next-api-dev'
+alias nstg='export AWS_PROFILE=next-api-stg-jp'
+alias nprod='export AWS_PROFILE=next-api-prod-jp'
+alias nci='export AWS_PROFILE=next-api-ci'
+alias ncd='export AWS_PROFILE=next-api-cd'
+alias ntoold='export AWS_PROFILE=next-api-tool-dev'
+alias ntoolp='export AWS_PROFILE=next-api-tool-prod'
+alias naudit='export AWS_PROFILE=next-api-audit-log'
+alias mfa='awsmfa --profile next-api-identity'
