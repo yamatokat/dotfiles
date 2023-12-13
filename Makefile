@@ -1,20 +1,28 @@
-all-in-one: init-all deploy-all
+all-in-one: deploy-home init-brew init-all deploy-all
 
 deploy-all:
-	@$(foreach val, $(wildcard ./setup/deploy/*.sh), bash $(val);)
+	@$(foreach val, $(wildcard ./setup/deploy/deploy_*.sh), bash $(val);)
 
 deploy-home:
-	@$(foreach val, $(wildcard ./setup/deploy/deploy_home.sh), bash $(val);)
+	bash ./setup/deploy/deploy_home.sh
 
 deploy-idea:
-	@$(foreach val, $(wildcard ./setup/deploy/deploy_idea.sh), bash $(val);)
+	bash ./setup/deploy/deploy_idea.sh
 
 deploy-vscode:
-	@$(foreach val, $(wildcard ./setup/deploy/deploy_vscode.sh), bash $(val);)
+	bash ./setup/deploy/deploy_vscode.sh
+
+deploy-nvim:
+	bash ./setup/deploy/deploy_nvim.sh
 
 init-all:
 	@$(foreach val, $(wildcard ./setup/init/*.sh), bash $(val);)
 
 init-brew:
-	@$(foreach val, $(wildcard ./setup/init/init_homebrew.sh), bash $(val);)
+	bash ./setup/init/init_homebrew.sh
+
+init-node:
+	bash ./setup/init/init_node.sh
 	
+init-vim-plugins:
+	bash ./setup/init/init_vim_plugins.sh

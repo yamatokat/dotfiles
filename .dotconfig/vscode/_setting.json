@@ -2,6 +2,7 @@
 // You should copy each settings manually.
 {
     "workbench.colorCustomizations": {
+        "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
         "terminal.ansiBlack": "#1e2132",
         "terminal.ansiBlue": "#84a0c6",
         "terminal.ansiBrightBlack": "#6b7089",
@@ -28,4 +29,6 @@
         "editorBracketHighlight.foreground6": "#D4D4D4"
     },
     "editor.bracketPairColorization.enabled": true,
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay",
 }
